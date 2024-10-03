@@ -16,7 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 function url_media_uploader_enqueue_scripts($hook) {
-    if ('post.php' !== $hook && 'post-new.php' !== $hook && 'upload.php' !== $hook) {
+    if ('post.php' !== $hook && 
+        'post-new.php' !== $hook && 
+        'upload.php' !== $hook && 
+        'skip' !== $hook
+    ) {
         return;
     }
 
@@ -29,6 +33,21 @@ function url_media_uploader_enqueue_scripts($hook) {
     ));
 }
 add_action('admin_enqueue_scripts', 'url_media_uploader_enqueue_scripts');
+
+
+// Handle Elementor
+if (has_action('elementor/editor/before_enqueue_scripts')) {
+	add_action( 'elementor/editor/before_enqueue_scripts', function() {
+		url_media_uploader_enqueue_scripts('skip');
+	} );
+}
+
+// Handle Divi
+add_action('wp_enqueue_scripts', function() {
+	if (function_exists('et_core_is_fb_enabled') && et_core_is_fb_enabled()) {
+		url_media_uploader_enqueue_scripts('skip');
+	}
+});
 
 function url_media_uploader_url_upload_ajax_handler() {
     if (!check_ajax_referer('url_media_uploader_nonce', 'nonce', false)) {

@@ -52,14 +52,15 @@ jQuery(document).ready(function($) {
                 if (response.success) {
                     var attachmentId = response.data.attachment_id;
                     wp.media.attachment(attachmentId).fetch().then(function() {
-                        var selection = wp.media.frame.state().get('selection');
+						let frame = (wp.media.frame === undefined) ? wp.media.frames.file_frame : wp.media.frame;
+						var selection = frame.state().get('selection');
                         var attachment = wp.media.attachment(attachmentId);
                         selection.add(attachment);
                         
-                        if(wp.media.frame.content.get() !== null) {
-                            wp.media.frame.content.get().collection.props.set({ignore: (+ new Date())});
+                        if(frame.content.get() !== null) {
+                            frame.content.get().collection.props.set({ignore: (+ new Date())});
                         } else {
-                            wp.media.frame.library.props.set ({ignore: (+ new Date())});
+                            frame.library.props.set ({ignore: (+ new Date())});
                         }
                     });
                     button.closest('.media-modal-content').find('#menu-item-browse').click(); 

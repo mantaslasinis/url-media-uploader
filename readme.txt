@@ -2,21 +2,24 @@
 Contributors: apprhyme
 Tags: media uploader, URL media, upload from URL, WordPress media library, import media
 Requires at least: 5.0
-Tested up to: 6.6.1
+Tested up to: 6.6.2
 Stable tag: 1.0.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Easily upload media to your WordPress library from URLs. Import images, videos, and other media directly from external links without manual download.
+Easily upload media to your library from external URLs or select files from the library by using internal ones.
 
 == Description ==
 
-**URL Media Uploader** allows users to seamlessly upload media files directly to their WordPress media library by pasting URLs. Skip the hassle of manually downloading files and re-uploading them—this plugin handles everything for you.
+**URL Media Uploader** allows users to seamlessly upload media files directly to their WordPress media library (or select existing ones) by pasting URLs. Skip the hassle of manually downloading files or scrolling through endless library and let the URL Media Uploader handle everything for you.
 
 **Key Features:**
+
 - Upload images, videos, and other media by pasting the URL.
 - Automatically downloads and attaches media to your media library.
+- Auto-selects the downloaded media.
+- Detects internal URLs and auto-selects it in the Media Library if the file exists.
 - Built-in AJAX support for a smooth user experience.
 - Great for bloggers, webmasters, and developers who manage large media collections.
 - Simple to use on posts, pages, and media library screens.
@@ -29,6 +32,9 @@ Easily upload media to your WordPress library from URLs. Import images, videos, 
 4. Paste the media URL in the designated area, and the plugin will handle the rest.
 
 == Frequently Asked Questions ==
+
+= I get an alert saying "cURL error 6: Could not resolve host". What do I do? =
+We are currently looking into this, but the quickest solution is to click "Upload" button multiple times.
 
 = What types of media can I upload using the URL Media Uploader? =
 You can upload various media types like images, videos, and other supported file formats directly from a URL.
@@ -47,12 +53,12 @@ Yes, the plugin ensures that URLs are properly validated before attempting to up
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0 =
 * Initial release.
 
 == Upgrade Notice ==
 
-= 1.0 =
+= 1.0.0 =
 Initial release of URL Media Uploader. Install this version to start uploading media via URL.
 
 == License ==
