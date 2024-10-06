@@ -24,6 +24,11 @@ Easily upload media to your library from external URLs or select files from the 
 - Great for bloggers, webmasters, and developers who manage large media collections.
 - Simple to use on posts, pages, and media library screens.
 
+== Screenshots ==
+1. Uploading media from an external URL
+2. Selecting media by uploading internal URL
+3. Compatible editors
+
 == Installation ==
 
 1. Upload the `url-media-uploader` folder to the `/wp-content/plugins/` directory.
@@ -32,6 +37,8 @@ Easily upload media to your library from external URLs or select files from the 
 4. Paste the media URL in the designated area, and the plugin will handle the rest.
 
 == Frequently Asked Questions ==
+= How is this different from "Insert from URL" core WordPress feature? =
+Using "Insert from URL" links an image to external website where the image was originally stored. With URL Media Uploader you will save the image to your Media Library, reducing load time and ensuring independence from external website.
 
 = I get an alert saying "cURL error 6: Could not resolve host". What do I do? =
 We are currently looking into this, but the quickest solution is to click "Upload" button multiple times.
