@@ -3,14 +3,14 @@ jQuery(document).ready(function($) {
     function urlMediaUploaderAddUrlInputIfNeeded() {
         var uploaderSection = $('.media-frame-content .upload-ui');
         if ($('#url-media-uploader-section').length === 0) {
-            var urlUploadHtml = '<div id="url-media-uploader-section">' +
+            var urlUploadHtml = '<form id="url-media-uploader-section">' +
                                 '<p class="upload-instructions drop-instructions">or</p>' +
                                 '<label for="url-media-uploader-input">Upload from URL:</label>' +
                                 '<div class="url-media-uploader-input-wrapper">' +
                                 '<input type="text" id="url-media-uploader-input" autocomplete="off" style="width: 100%;" placeholder="Enter media URL here">' +
                                 '<button id="url-media-uploader-button" class="button">Upload</button>' +
                                 '</div>' +
-                                '</div>';
+                                '</form>';
             uploaderSection.append(urlUploadHtml);
         }
     }
