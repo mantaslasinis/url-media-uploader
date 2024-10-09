@@ -30,6 +30,7 @@ class URL_Media_Uploader {
         if ( 'post.php' !== $hook && 
              'post-new.php' !== $hook && 
              'upload.php' !== $hook && 
+             'media-new.php' !== $hook &&
              'skip' !== $hook 
         ) {
             return;
