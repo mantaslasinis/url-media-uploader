@@ -60,6 +60,9 @@ Yes, the plugin ensures that URLs are properly validated before attempting to up
 
 == Changelog ==
 
+= 1.1.0 =
+* Code Structure updates; Base64 encoded image handling
+
 = 1.0.1 = 
 * Advanced validation added for downloadable URL to prevent Server-Side Request Forgery
 
