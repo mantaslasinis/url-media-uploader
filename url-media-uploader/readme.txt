@@ -2,8 +2,8 @@
 Contributors: apprhyme
 Tags: media uploader, URL media, upload from URL, WordPress media library, import media
 Requires at least: 5.0
-Tested up to: 6.6.2
-Stable tag: 1.1.0
+Tested up to: 6.7.2
+Stable tag: 1.0.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -60,13 +60,16 @@ Yes, the plugin ensures that URLs are properly validated before attempting to up
 
 == Changelog ==
 
+= 1.0.1 = 
+* Advanced validation added for downloadable URL to prevent Server-Side Request Forgery
+
 = 1.0.0 =
 * Initial release.
 
 == Upgrade Notice ==
 
-= 1.0.0 =
-Initial release of URL Media Uploader. Install this version to start uploading media via URL.
+= 1.0.1 = 
+* Advanced validation added for downloadable URL to prevent Server-Side Request Forgery
 
 == License ==
 
